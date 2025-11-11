@@ -18,7 +18,7 @@
                         </div>
 
                         <a href="{{ route('verify.form') }}" id="verify-button"
-                            class="btn btn-warning btn-sm fw-bold">Verifikasi Sekarang</a>
+                            class="btn btn-success btn-sm fw-bold">Verifikasi Sekarang</a>
                     </div>
                 @endif
 
@@ -32,7 +32,7 @@
                 {{-- Deskripsi utama --}}
                 <p class="lead mb-4">
                     Ini adalah <span class="fw-bold text-success">Dashboard</span> Anda pada 
-                    <span class="text-primary">Sistem Informasi Desa Digital</span>.
+                    <span class="text-warning">Sistem Informasi Desa Digital</span>.
                     Gunakan menu di bawah untuk mengakses berbagai layanan dan data penting desa Anda.
                 </p>
 

@@ -14,7 +14,7 @@
             Transformasi digital untuk meningkatkan pelayanan publik dan transparansi pemerintahan desa.
         </p>
         <div class="mt-4 animate__animated animate__fadeInUp animate__delay-1s">
-            <a href="{{ route('login') }}" class="btn btn-warning btn-lg shadow-sm me-2">Masuk Sistem</a>
+            <a href="{{ route('login') }}" class="btn btn-green btn-lg shadow-sm me-2">Masuk Sistem</a>
             <a href="#fitur" class="btn btn-outline-light btn-lg">Jelajahi Fitur</a>
         </div>
     </div>
@@ -67,10 +67,10 @@
         <div class="row g-4 justify-content-center">
             @php
                 $steps = [
-                    ['icon' => 'ti-user-check', 'title' => 'Login', 'desc' => 'Masuk menggunakan akun perangkat desa atau warga.'],
-                    ['icon' => 'ti-file-pencil', 'title' => 'Isi Data', 'desc' => 'Lengkapi data sesuai kebutuhan layanan.'],
-                    ['icon' => 'ti-shield-check', 'title' => 'Verifikasi', 'desc' => 'Data diverifikasi oleh perangkat desa.'],
-                    ['icon' => 'ti-mail', 'title' => 'Selesai', 'desc' => 'Surat atau hasil layanan dapat diunduh langsung.']
+                    ['icon' => 'ti ti-user-check', 'title' => 'Login', 'desc' => 'Masuk menggunakan akun perangkat desa atau warga.'],
+                    ['icon' => 'ti ti-file-text', 'title' => 'Isi Data', 'desc' => 'Lengkapi data sesuai kebutuhan layanan.'],
+                    ['icon' => 'ti ti-shield-check', 'title' => 'Verifikasi', 'desc' => 'Data diverifikasi oleh perangkat desa.'],
+                    ['icon' => 'ti ti-mail', 'title' => 'Selesai', 'desc' => 'Surat atau hasil layanan dapat diunduh langsung.']
                 ];
             @endphp
             @foreach ($steps as $index => $step)
@@ -93,7 +93,7 @@
     <div class="container position-relative">
         <h2 class="fw-bold mb-3">Siap Menjadi Desa <span class="text-warning">Digital dan Transparan</span>?</h2>
         <p class="lead mb-4">Bangun tata kelola desa yang efektif dan melibatkan warga secara aktif.</p>
-        <a href="{{ route('login') }}" class="btn btn-warning btn-lg shadow-lg">Mulai Sekarang</a>
+        <a href="{{ route('login') }}" class="btn btn-green btn-lg shadow-lg">Mulai Sekarang</a>
     </div>
 </section>
 
@@ -143,9 +143,9 @@
             <div class="col-md-4">
                 <div class="card shadow-sm border-0 rounded-4 p-3 h-100">
                     <div class="d-flex align-items-start">
-                        <img src="{{ asset('assets/images/user/avatar-1.jpg') }}" class="wid-50 rounded-circle me-3">
+                        <img src="{{ asset('assets/images/user/khofifi.jpg') }}" class="wid-50 rounded-circle me-3">
                         <div>
-                            <h5 class="mb-1 fw-semibold">Ahmad Fauzi</h5>
+                            <h5 class="mb-1 fw-semibold">Khofifi Anhar</h5>
                             <small class="text-muted d-block mb-2">Kepala Desa Sukamaju</small>
                             <p class="text-muted">“Pelayanan jadi cepat dan data bisa dicek kapan pun. Warga senang, kerja lebih efisien.”</p>
                         </div>

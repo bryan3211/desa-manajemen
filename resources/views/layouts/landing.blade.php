@@ -39,7 +39,7 @@
         }
 
         .navbar-brand img {
-            filter: brightness(0) invert(1);
+            filter: none;
         }
 
         .nav-link {
@@ -70,7 +70,7 @@
         }
 
         .footer-logo {
-            filter: brightness(0) invert(1);
+            filter: none;
         }
     </style>
 </head>
@@ -87,7 +87,7 @@
     <nav class="navbar navbar-expand-md navbar-dark py-2 shadow-sm fixed-top">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img width="60" src="{{ asset('assets/images/my/logo-desa.png') }}" alt="logo desa">
+                <img width="40" src="{{ asset('assets/images/my/sidoarjo.png') }}" alt="logo desa">
                 <span class="ms-2 fw-bold text-white">Sistem Informasi Desa</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -130,7 +130,7 @@
         <div class="container pb-4 border-bottom border-light">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="{{ asset('assets/images/my/logo-desa.png') }}" alt="Logo Desa"
+                    <img src="{{ asset('assets/images/my/sidoarjo.png') }}" alt="logo desa"
                         class="img-fluid mb-3 footer-logo" style="max-width: 150px;">
                     <p class="opacity-75">
                         Sistem Informasi Desa membantu pemerintah desa dalam pelayanan masyarakat,
