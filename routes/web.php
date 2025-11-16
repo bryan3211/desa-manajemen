@@ -63,10 +63,20 @@ Route::middleware(['auth', 'web'])->group(function () {
         Route::get('/admin/pengaduan/{id}', [PengaduanController::class, 'adminShow'])->name('admin.pengaduan.show');
         Route::put('/admin/pengaduan/{id}', [PengaduanController::class, 'adminUpdate'])->name('admin.pengaduan.update');
 
-        // Biodata admin
-        Route::get('/admin/biodata', [BiodataController::class, 'adminIndex'])->name('admin.biodata.index');
-        Route::get('/admin/biodata/{id}', [BiodataController::class, 'adminShow'])->name('admin.biodata.show');
-        Route::put('/admin/biodata/{id}/verify', [BiodataController::class, 'adminVerify'])->name('admin.biodata.verify');
+  // ADMIN - Data Penduduk
+        Route::middleware(['auth', 'web', 'cekRole:admin'])->group(function () {
+        Route::prefix('admin/penduduk')->name('admin.penduduk.')->group(function () {
+        Route::get('/', 'Admin\PendudukController@index')->name('index');
+        Route::get('/create', 'Admin\PendudukController@create')->name('create');
+        Route::post('/', 'Admin\PendudukController@store')->name('store');
+        Route::get('/{id}', 'Admin\PendudukController@show')->name('show');
+        Route::get('/{id}/edit', 'Admin\PendudukController@edit')->name('edit');
+        Route::put('/{id}', 'Admin\PendudukController@update')->name('update');
+        Route::delete('/{id}', 'Admin\PendudukController@destroy')->name('destroy');
+        Route::get('/export/csv', 'Admin\PendudukController@export')->name('export');
+    });
+ });
+
     });
 
     // USER
@@ -90,5 +100,4 @@ Route::middleware(['auth', 'web'])->group(function () {
         Route::get('/pengaduan/{id}', [PengaduanController::class, 'show'])->name('user.pengaduan.show');
         Route::delete('/pengaduan/{id}', [PengaduanController::class, 'destroy'])->name('user.pengaduan.destroy');
     });
-
 });

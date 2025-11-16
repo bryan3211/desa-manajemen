@@ -104,39 +104,68 @@
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         @foreach ($errors->all() as $error)
-                            <div>{{ $error }}</div>
+                            <div><i class="ti ti-alert-circle me-2"></i>{{ $error }}</div>
                         @endforeach
                     </div>
                 @endif
 
                 @if (session('success'))
                     <div class="alert alert-success">
-                        {{ session('success') }}
+                        <i class="ti ti-check me-2"></i>{{ session('success') }}
                     </div>
                 @endif
 
+                <!-- NIK Input -->
                 <div class="form-group mb-3">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email" placeholder="Alamat email"
-                        value="{{ session('registered_email') }}" autocomplete="off" required>
+                    <label class="form-label">
+                        <i class="ti ti-id-badge me-2"></i>NIK (16 Digit)
+                    </label>
+                    <input type="text" class="form-control" name="nik" 
+                        placeholder="Contoh: 3515011234567890" maxlength="16" 
+                        pattern="[0-9]{16}" value="{{ session('registered_email') }}" 
+                        autocomplete="off" required>
+                    <small class="text-muted d-block mt-1">
+                        Masukkan 16 digit Nomor Induk Kependudukan Anda
+                    </small>
                 </div>
 
+                <!-- Password Input -->
                 <div class="form-group mb-3">
-                    <label for="password" class="form-label">Kata Sandi</label>
-                    <input id="password" type="password" class="form-control" name="password" placeholder="Password"
+                    <label for="password" class="form-label">
+                        <i class="ti ti-lock me-2"></i>Kata Sandi
+                    </label>
+                    <input id="password" type="password" class="form-control" 
+                        name="password" placeholder="Password"
                         @if (session('registered_email')) autofocus @endif required>
                 </div>
 
+                <!-- Remember & Forgot -->
                 <div class="d-flex mt-1 justify-content-between">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="customCheckc1" name="remember">
-                        <label class="form-check-label text-light" for="customCheckc1">Ingat saya</label>
+                        <input class="form-check-input" type="checkbox" 
+                            id="customCheckc1" name="remember">
+                        <label class="form-check-label text-light" for="customCheckc1">
+                            <i class="ti ti-bookmark me-1"></i>Ingat saya
+                        </label>
                     </div>
-                    <a href="{{ route('forgot_password.email_form') }}" class="text-secondary">Lupa password?</a>
+                    <a href="{{ route('forgot_password.email_form') }}" class="text-secondary">
+                        <i class="ti ti-help me-1"></i>Lupa password?
+                    </a>
                 </div>
 
+                <!-- Submit Button -->
                 <div class="d-grid mt-4">
-                    <button type="submit" class="btn btn-primary btn-lg shadow">Login</button>
+                    <button type="submit" class="btn btn-primary btn-lg shadow">
+                        <i class="ti ti-login me-2"></i>Login
+                    </button>
+                </div>
+
+                <!-- Register Link -->
+                <div class="text-center mt-3">
+                    <small class="text-muted">
+                        Belum terdaftar? 
+                        <a href="/register" class="link-primary fw-bold">Daftar di sini</a>
+                    </small>
                 </div>
 
                 <div class="saprator mt-4">

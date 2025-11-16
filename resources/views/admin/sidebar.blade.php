@@ -13,3 +13,9 @@
         <span class="pc-micon"><i class="ti ti-alert-circle"></i>
         </span><span class="pc-mtext">Kelola Pengaduan</span></a>
 </li>
+<li class="pc-item">
+    <a href="{{ route('admin.penduduk.index') }}" class="pc-link">
+        <span class="pc-micon"><i class="ti ti-users"></i></span>
+        <span class="pc-mtext">Data Penduduk</span>
+    </a>
+</li>
